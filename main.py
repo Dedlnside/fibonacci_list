@@ -7,18 +7,18 @@ def fibonacci(n):
 		yield(a)
 		a, b = b, a + b
 
-qte = 100
-fibo_list = [None] * qte
+count = 100
+fibo_list = [None] * count
 
 t1 = dt.datetime.now()
-g = fibonacci(qte)
+g = fibonacci(count)
 t2 = dt.datetime.now()
 
 dt_gen = t2 - t1
 
 g_mem = sys.getsizeof(g)
 
-for i in range(qte):
+for i in range(count):
 	fibo_list[i] = (next(g))
 
 print(fibo_list)
