@@ -12,9 +12,6 @@ fibo_list = [None] * count
 
 t1 = dt.datetime.now()
 g = fibonacci(count)
-t2 = dt.datetime.now()
-
-dt_gen = t2 - t1
 
 g_mem = sys.getsizeof(g)
 
@@ -22,5 +19,7 @@ for i in range(count):
 	fibo_list[i] = (next(g))
 
 print(fibo_list)
+t2 = dt.datetime.now()
+dt_gen = t2 - t1
 print(f"Completed in: {dt_gen}")
 print(f"Memory: {g_mem}")
