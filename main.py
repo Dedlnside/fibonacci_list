@@ -7,7 +7,7 @@ def fibonacci(n):
 		yield(a)
 		a, b = b, a + b
 
-count = 100
+count = int(input("Enter the size of the fibonacci list: "))
 fibo_list = [None] * count
 
 t1 = dt.datetime.now()
